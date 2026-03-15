@@ -8,7 +8,6 @@ void swap(int *array, ssize_t item1, ssize_t item2)
     array[item1] = array[item2];
     array[item2] = tmp;
 }
-
 int lomuto_partition(int *array, ssize_t first, ssize_t last, size_t size)
 {
     int pivot = array[last];
@@ -33,7 +32,6 @@ int lomuto_partition(int *array, ssize_t first, ssize_t last, size_t size)
     }
     return (current);
 }
-
 void qs(int *array, ssize_t first, ssize_t last, int size)
 {
     ssize_t position = 0;
@@ -46,11 +44,6 @@ void qs(int *array, ssize_t first, ssize_t last, int size)
         qs(array, position + 1, last, size);
     }
 }
-/**
- *quick_sort - prepare the terrain to quicksort algorithm
- *@array: array
- *@size: array size
- */
 void quick_sort(int *array, size_t size)
 {
     if (!array || size < 2)
