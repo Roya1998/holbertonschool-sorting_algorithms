@@ -1,11 +1,5 @@
 #include "sort.h"
 
-/**
- * swap - swaps two elements of an array
- * @array: array of integers
- * @item1: first index
- * @item2: second index
- */
 void swap(int *array, ssize_t item1, ssize_t item2)
 {
 	int tmp;
@@ -14,16 +8,6 @@ void swap(int *array, ssize_t item1, ssize_t item2)
 	array[item1] = array[item2];
 	array[item2] = tmp;
 }
-
-/**
- * lomuto_partition - Lomuto partition scheme
- * @array: array of integers
- * @first: starting index
- * @last: ending index
- * @size: size of array
- *
- * Return: pivot position
- */
 int lomuto_partition(int *array, ssize_t first, ssize_t last, size_t size)
 {
 	int pivot = array[last];
@@ -41,7 +25,6 @@ int lomuto_partition(int *array, ssize_t first, ssize_t last, size_t size)
 			current++;
 		}
 	}
-
 	if (array[current] != array[last])
 	{
 		swap(array, current, last);
@@ -50,14 +33,6 @@ int lomuto_partition(int *array, ssize_t first, ssize_t last, size_t size)
 
 	return (current);
 }
-
-/**
- * qs - recursive quicksort
- * @array: array of integers
- * @first: starting index
- * @last: ending index
- * @size: array size
- */
 void qs(int *array, ssize_t first, ssize_t last, size_t size)
 {
 	ssize_t position;
