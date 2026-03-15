@@ -4,9 +4,9 @@ void swap(int *array, ssize_t item1, ssize_t item2)
 {
 	int tmp;
 
-	tmp = array[item1];
-	array[item1] = array[item2];
-	array[item2] = tmp;
+tmp = array[item1];
+array[item1] = array[item2];
+array[item2] = tmp;
 }
 int lomuto_partition(int *array, ssize_t first, ssize_t last, size_t size)
 {
